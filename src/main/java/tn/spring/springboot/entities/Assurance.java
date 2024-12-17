@@ -12,12 +12,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 public class Assurance implements Serializable {
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAssurance;
     private String designation;
     private float montant;
+
     @ManyToOne
     private Contrat contrat;
     @ManyToOne

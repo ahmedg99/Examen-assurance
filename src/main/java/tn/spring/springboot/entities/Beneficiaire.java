@@ -7,19 +7,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Data
 public class Beneficiaire implements Serializable {
-
-    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idBeneficiaire;
+    private int idBenef;
     private int cin;
     private String nom;
     private String prenom;
